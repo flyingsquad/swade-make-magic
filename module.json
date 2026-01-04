@@ -24,8 +24,8 @@
 	  }
 	]
   },
-  "url": "https://github.com/flyingsquad/make-magic",
-  "manifest": "https://raw.githubusercontent.com/flyingsquad/make-magic/main/module.json",
-  "version": "1.0.0",
-  "download": "https://github.com/flyingsquad/make-magic/archive/refs/tags/v1.0.0.zip"
+  "url": "https://github.com/flyingsquad/swade-make-magic",
+  "manifest": "https://raw.githubusercontent.com/flyingsquad/swade-make-magic/main/module.json",
+  "version": "1.0.1",
+  "download": "https://github.com/flyingsquad/swade-make-magic/archive/refs/tags/v1.0.1.zip"
 }
