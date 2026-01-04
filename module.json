@@ -1,0 +1,31 @@
+{
+  "id": "swade-make-magic",
+  "title": "Make Magic",
+  "description": "Make an item magic",
+  "authors": [
+    {
+		"name": "flying-squad"
+    }
+  ],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13"
+  },
+  "esmodules": ["make-magic.js"],
+  "relationships": {
+    "systems": [
+      {
+        "id": "swade",
+        "type": "system",
+        "compatibility": {
+          "minimum": "4.2.0",
+          "maximum": "5.2.0"
+		}
+	  }
+	]
+  },
+  "url": "https://github.com/flyingsquad/make-magic",
+  "manifest": "https://raw.githubusercontent.com/flyingsquad/make-magic/main/module.json",
+  "version": "1.0.0",
+  "download": "https://github.com/flyingsquad/make-magic/archive/refs/tags/v1.0.0.zip"
+}

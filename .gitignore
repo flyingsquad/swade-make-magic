@@ -1,0 +1,8 @@
+# 
+*.lock
+*.scc
+.gitattributes
+
+
+packs/macros/LOCK
+*.old
