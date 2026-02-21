@@ -621,9 +621,32 @@ class MakeScrollDialog extends foundry.applications.api.DialogV2 {
 }
 
 
-Hooks.on("createItem", (item, action, id) => {
+Hooks.on("createItem", async (item, action, id) => {
 	if (!item.parent)
 		return;
+	if (item.system.isArcaneDevice) {
+		if (item.system.powerPoints.max <= 0)
+			return;
+		let arcane = null;
+		for (let g of item.system.grants) {
+			if (g?.mutation?.system?.arcane) {
+				arcane = g.mutation.system.arcane;
+				break;
+			}
+		}
+		if (!arcane)
+			return;
+		let actorPP = item.parent.system?.powerPoints;
+		if (!actorPP)
+			return;
+		actorPP[arcane] = {
+			max: item.system.powerPoints.max,
+			value: item.system.powerPoints.max
+		};
+		await item.parent.update({"system.powerPoints": actorPP});
+		return;
+	}
+
 	if (item.type !== 'consumable')
 		return;
 	if (item.system.swid !== 'scroll')
